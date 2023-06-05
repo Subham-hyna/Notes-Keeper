@@ -13,10 +13,10 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.set("view engine","ejs")
 app.use(express.static("public"))
 
-app.get("/",(req,res)=>{
+app.get("/signup",(req,res)=>{
     res.render("signup")
 })
-app.get("/login",(req,res)=>{
+app.get("/",(req,res)=>{
     res.render("login")
 })
 
@@ -194,7 +194,7 @@ app.post("/deleteacc",async(req,res)=>{
         
         await Register.deleteOne({userName:user.userName})
         await note.Note.deleteMany({userName:user.userName})
-        res.redirect("/");
+        res.redirect("/signup");
     }else{
         res.redirect("/user.userName/account")
     }
@@ -211,7 +211,7 @@ app.post("/deleteNote",async(req,res)=>{
     user=await Register.findOneAndUpdate({userName:userPost.userName},{$set:{
         item:noteData
     }}) 
-    console.log(userPost._id);
+    // console.log(userPost._id);
     res.redirect(`/${userPost.userName}/index`)
 })
 
@@ -227,7 +227,7 @@ app.post("/editcompose",async(req,res)=>{
         bg:req.body.cardColor
     })
     const noteData= await note.Note.find({userName:user.userName})
-    console.log(userPost);
+    // console.log(userPost);
     
     await Register.findOneAndUpdate({userName:user.userName},{$set:{
         item:noteData
