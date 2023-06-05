@@ -1,0 +1,59 @@
+<%- include("partials/header.ejs"); -%>
+<section class="">
+    <div class="xl:w-[80rem] xl:mx-auto">
+    <div class=" top-bg-image h-36 md:h-44 lg:h-52 rounded-bl-[4rem] rounded-br-[4rem] md:rounded-bl-[8rem] md:rounded-br-[8rem]">  
+        <img src="/assets/real.png" alt="" class="w-72 md:w-80 lg:w-96 text-center my-auto mx-auto">
+       
+    </div>
+    <div class="max-w-[4.5rem] -mt-8 mx-auto text-center p-5 rounded-full bg-slate-200 z-10"><i class="fa-solid fa-book-open fa-xl"></i></div>
+    <h1 class="text-5xl p-5 text-center font-bold text-sky-600 tracking-wider">WEL<span class="font-semibold underline decoration-red-500">COME</span></h1>
+    
+    <div class="flex flex-wrap justify-center items-center my-10">
+        <div class="left-bg-image hidden lg:block h-[45rem] w-[28rem] rounded-tl-2xl rounded-bl-2xl">
+        </div>
+        <div class="m-5 lg:m-0 w-full shadow border md:mt-0 max-w-md xl:p-0 bg-gray-800 border-gray-700 lg:rounded-tl-none lg:rounded-bl-none rounded-2xl">
+            <div class="p-6 lg:p-5">
+                <h1 class="mb-5 lg:hidden text-xl font-bold leading-tight tracking-tight md:text-2xl text-white">
+                    Create an account
+                </h1>
+                <form class="space-y-2 md:space-y-6" action="/signup" method="POST">
+                    <div>
+                        <label for="fName" class="block mb-1 text-sm font-medium text-white">First Name</label>
+                        <input type="text" name="firstName" id="fName" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="First" required="">
+                    </div>
+                    <div>
+                        <label for="lName" class="block mb-1 text-sm font-medium text-white">Last Name</label>
+                        <input type="text" name="lastName" id="lName" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Last" required="">
+                    </div>
+                    <div>
+                        <label for="uName" class="block mb-1 text-sm font-medium text-white">Username</label>
+                        <input type="text" name="userName" id="uName" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="xyz123" required="">
+                    </div>
+                    <div>
+                        <label for="mail" class="block mb-1 text-sm font-medium text-white">Your email</label>
+                        <input type="email" name="email" id="mail" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="name@company.com" required="">
+                    </div>
+                    <p class="text-sm font-light text-red-500 -mb-3">
+                        Password and Confirm Password not matching 
+                    </p>
+                    <div>
+                        <label for="pass" class="block mb-1 text-sm font-medium text-white">Password</label>
+                        <input type="password" name="password" id="pass" placeholder="••••••••" class=" border border-gray-300 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 dark:border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" required="">
+                    </div>
+                    <div>
+                        <label for="cpass" class="block mb-1 text-sm font-medium text-white">Confirm password</label>
+                        <input type="password" name="cpassword" id="cpass" placeholder="••••••••" class="mb-2 border border-gray-300 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 dark:border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" required="">
+                    </div>
+                   
+                    <button type="submit" class="w-full text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800">Create an account</button>
+                    <p class="text-sm font-light text-gray-500">
+                        Already have an account? <a href="/login" class="font-medium text-sky-600 hover:underline">Login here</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+    <%- include("partials/footer.ejs"); -%>
+   

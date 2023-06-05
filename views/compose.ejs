@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs"); -%>
+<%- include("partials/navbar.ejs"); -%>
+
+<div class="flex flex-col px-8 min-h-[70rem] max-w-[85rem] mx-auto">
+    <h1 class="tracking-tight font-sans text-4xl text-slate-900  mt-5 mb-3">
+            Compose
+    </h1>
+    <form action="/compose" method="POST">
+       
+        <div>
+            <label for="title" class="block mb-2 text-md font-medium text-gray-900">Title</label>
+            <input type="text" name="noteTitle" id="title" class="mb-4 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-sky-600 focus:border-0 focus:drop-shadow-xl block w-full p-2.5"  required="" autocomplete="off">
+        </div>
+        <div>
+            <p class="block mb-2 text-md font-medium text-gray-900">Content</p>
+            <textarea name="noteBody" id="content" class="h-96 resize-none mb-4 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-sky-600 focus:border-0 focus:drop-shadow-xl block w-full p-2.5" required=""></textarea>
+        </div>
+       
+        <button type="submit" class="w-min-full text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Publish</button>
+    
+    </form>
+</div>
+<%- include("partials/footer.ejs"); -%>

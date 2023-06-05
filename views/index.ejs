@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs"); -%>
+<%- include("partials/navbar.ejs"); -%>
+ <section class="max-w-6xl mx-auto px-10 min-h-[70rem] bg-white">
+    <h1 class="text-3xl font-semibold tracking-wider pt-6">Hi <%=name%></h1>
+    <h2 class="max-w-6xl px-10 mx-auto py-6 lg:text-lg">
+    Your simple notes keeping habit involves regularly jotting down important information and ideas. By maintaining concise and organized notes, you enhance your productivity, memory, and overall effectiveness in managing tasks and capturing valuable insights. It's a habit that promotes clarity, organization, and efficient information retention.</h1>
+    <h1 class="text-2xl font-semibold mb-20" >Your Notes</h2>
+    <div class="flex flex-row flex-wrap justify-center mx-auto max-w-[68rem] gap-y-10 gap-x-10 cursor-pointer">
+        <% posts.forEach(function(post){ %>
+            <div class="flex flex-col h-60 w-60 min-w-[15rem] p-3 drop-shadow-2xl <%= post.bg%> <%=post.rotate%> <%= post.hoverRotate%>">
+                <i class="fa-solid fa-map-pin text-red-600 fa-xl -mt-5 mb-3 text-center"></i>
+                <h3 class="text-2xl text-center"> <%= post.title.substring(0,15) %> </h3>
+                <textarea class="resize-none bg-inherit h-72 text-left overflow-hidden"><%=post.content.substring(0,197)%></textarea>
+                    
+                
+                <a href="/posts/<%= post.title %>" class="hover:text-white">View more</a>
+        </div>
+        <% }) %>
+    </div>    
+    <a href="/<%=userName %>/compose"><button type="submit" class="w-32 my-6 text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Compose</button></a>
+</section>
+<%- include("partials/footer.ejs"); -%>

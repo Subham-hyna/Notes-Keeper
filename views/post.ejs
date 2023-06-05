@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs"); -%>
+<%- include("partials/navbar.ejs"); -%>
+    <!-- <h1><%=title%></h1>
+    <%=content%>
+    <a href="/posts/<%=title%>/editpost"><button type="submit">Edit</button></a>
+<form action="/deleteNote" method="POST">
+    <button type="submit">Delete Note</button>
+</form>
+<a href="/<%=userName %>/index">Back to Home</a> -->
+<div class="min-h-[70rem]">
+    <div class="flex flex-col py-14 px-12 max-w-[85rem] mx-auto">
+   <h1 class=" text-3xl lg:text-4xl font-sans font-semibold font- py-3 border-b-2 border-blue-900" ><%=title%></h1>
+   <hr class="text-center max-w-4xl">
+   <textarea class="text-left p-2 lg:text-lg pt-4 pb-32 border-slate-300 h-96 resize-none bg-inherit" readonly><%=content%></textarea>
+</div>
+<div class="flex flex-col">
+<div class="flex gap-x-3 justify-center items-center">
+    <a href="/posts/<%=title%>/editpost"><button type="submit" class="w-min-full text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Edit</button></a>
+<form action="/deleteNote" method="POST">
+    <button type="submit" class="w-min-full text-white bg-red-500 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Delete Note</button>
+</form>
+</div>
+<p class="text-sm text-center font-light text-gray-500 my-2 -translate-x-3">
+<a href="/<%=userName %>/index" class="hidden md:block font-medium text-sky-600 hover:underline dark:text-primary-500">Back to home</a>
+</p>
+</div>
+</div>
+<%- include("partials/footer.ejs"); -%>

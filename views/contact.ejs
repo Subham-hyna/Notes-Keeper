@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs"); -%>
+<%- include("partials/navbar.ejs"); -%>
+<section class="max-w-6xl mx-auto px-10 min-h-[70rem]">
+    <div class="flex flex-col justify-center items-center">
+    
+        <h3 class="text-3xl py-2 mt-4" >Contact Us</h3>
+        <p class="text-base md:text-lg">xxx-xxx-xxxx</p>
+        <p class="text-base md:text-lg pb-4">xyz123@gmail.com</p>
+    
+        <form action="mailto:xyz@gmail.com" method="POST">
+            <textarea class="h-44 w-52 md:w-96 resize-none mb-4 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-sky-600 focus:border-0 focus:drop-shadow-xl block p-2.5" required=""></textarea>
+            <a href="/<%=userName %>/compose"><button type="submit" class="w-32 my-6 text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Submit</button></a>
+            
+        </form>
+        <div class="flex gap-x-10 my-2 pt-4 justify-center">
+            <a href="https://www.facebook.com/subham.dutta.37604303/" target="g"><i class="fa-brands fa-facebook fa-xl hover:text-blue-600"></i></a>
+            <a href="https://www.instagram.com/_________.subham/?next=%2F" target="g"><i class="fa-brands fa-instagram fa-xl hover:text-pink-500"></i></a>
+            <a href="https://twitter.com/Subham03036707" target="g"><i class="fa-brands fa-twitter fa-xl hover:text-sky-500"></i></a>
+            <a href="https://www.linkedin.com/in/subhamDutta02" target="g"><i class="fa-brands fa-linkedin fa-xl hover:text-blue-900"></i></a>
+        </div>
+</div>
+</section>
+<%- include("partials/footer.ejs"); -%>

@@ -1,0 +1,54 @@
+<%- include("partials/header") -%>
+<section class="">
+<div class="xl:w-[80rem] xl:mx-auto">
+        <div class=" top-bg-image hidden md:block md:h-36 lg:h-52 rounded-bl-[4rem] rounded-br-[4rem] md:rounded-bl-[8rem] md:rounded-br-[8rem]">  
+            <img src="/assets/real.png" alt="" class="w-72 md:w-80 lg:w-96 text-center my-auto mx-auto">
+       
+        </div>
+    <div class="hidden md:block max-w-[4.5rem] -mt-8 mx-auto text-center p-5 rounded-full bg-slate-200 z-10"><i class="fa-solid fa-book-open fa-xl"></i></div>
+    <div class="md:hidden flex justify-between items-center bg-slate-800 px-4 py-2">
+        <a href="/<%=userName %>/index"><i class="fa-solid fa-arrow-left-long fa-2xl text-white"></i></a>
+        <img src="/assets/realwhite.png" alt="" class="md:hidden w-36">
+    </div>
+    <h1 class="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center pt-4 text-slate-900">Account Setting</h1>
+    <div class="max-w-[5rem] lg:max-w-[6rem] mx-auto text-center p-5 rounded-full bg-slate-200 mt-10"><h1 class="font-sans text-4xl lg:text-6xl"><%=firstName.slice(0,1).toUpperCase() %></h1></div>
+    
+    <div class="flex flex-wrap justify-center items-center my-10 mb-20">
+        
+        <div class="m-5 lg:m-0 w-full shadow border md:mt-0 max-w-md xl:p-0 bg-gray-800 border-gray-700 rounded-2xl">
+            <div class="p-6 lg:p-5">
+                <h1 class="mb-5 lg:hidden text-xl font-bold leading-tight tracking-tight md:text-2xl text-white">
+                    Account Credentials
+                </h1>
+                <form class="space-y-4 md:space-y-6" action="/account" method="POST">
+                    <div>
+                        <label for="fName" class="block mb-2 text-sm font-medium text-white">First Name</label>
+                        <input type="text" name="firstName" id="fName" value="<%=firstName%>" class=" border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="First">
+                    </div>
+                    <div>
+                        <label for="lName" class="block mb-2 text-sm font-medium text-white">Last Name</label>
+                        <input type="text" name="lastName" id="lName" value="<%=lastName%>" class=" border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Last">
+                    </div>
+                    <div>
+                        <p class="block mb-2 text-sm font-medium text-white">Username</p>
+                        <div id="uName" class="h-9  border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"><p><%=userName%></p></div>
+                    </div>
+                    <div>
+                        <p class="block mb-2 text-sm font-medium text-white">Your email</p>
+                        <div id="mail" class="mb-4 h-9  border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"><p><%=email%></p></div>
+                    </div>
+                   
+                    <button type="submit" class="w-full my-2 text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Save Data</button>
+                    <button class="w-full my-2 text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"><a href="/login">Log Out</a></button>
+                    <button class="w-full text-white bg-red-500 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"><a href="/<%=userName%>/delete">Delete Account</a></button>
+                    <p class="text-sm text-center font-light text-gray-500 dark:text-gray-400">
+                        <a href="/<%=userName %>/index" class="hidden md:block font-medium text-sky-600 hover:underline dark:text-primary-500">Back to home</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<%- include("partials/footer") -%>
+

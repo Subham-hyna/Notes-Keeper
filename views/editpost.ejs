@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs"); -%>
+<%- include("partials/navbar.ejs"); -%>
+
+<div class="flex flex-col px-8 min-h-[70rem] max-w-[85rem] mx-auto">
+    <h1 class="tracking-tight font-sans text-4xl text-slate-900  mt-5 mb-3">
+            Edit Post
+    </h1>
+    <form action="/editcompose" method="POST">
+       
+        <div>
+            <label for="title" class="block mb-2 text-md font-medium text-gray-900">Title</label>
+            <input type="text" name="noteTitle" id="title" value="<%=noteTitle%>" class=" mb-4 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-md focus:ring-sky-600 focus:border-0 focus:drop-shadow-xl block w-full p-2.5"  required="" autocomplete="off">
+        </div>
+        <div>
+            <p class="block mb-2 text-md font-medium text-gray-900">Content</p>
+            <textarea name="noteBody" id="content" class="h-96 resize-none mb-4 bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-sky-600 focus:border-0 focus:drop-shadow-xl block w-full p-2.5" required=""><%=noteBody%></textarea>
+        </div>
+        <p class="block mb-2 text-md font-medium text-gray-900">Choose Card Color</p>
+        <div class="flex gap-x-4 mb-2">
+            <div class="flex gap-1 items-center">
+                <input type="radio" id="green" name="cardColor" value="green">
+            <label for="green">Green</label>
+            </div>
+            <div class="flex gap-1 items-center">
+                <input type="radio" id="yellow" name="cardColor" value="yellow">
+                <label for="yellow">Yellow</label>
+                </div>
+                <div class="flex gap-1 items-center">    
+                    <input type="radio" id="pink" name="cardColor" value="pink">
+                    <label for="pink">Pink</label>
+                </div>
+                <div class="flex gap-1 items-center">
+                    <input type="radio" id="orange" name="cardColor" value="orange">
+                <label for="orange">Orange</label>
+                </div>
+</div>
+        <button type="submit" name="button" class="w-min-full text-white bg-sky-600 hover:bg-sky-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Edit</button>
+        
+    </form>
+</div>
+<%- include("partials/footer.ejs"); -%>

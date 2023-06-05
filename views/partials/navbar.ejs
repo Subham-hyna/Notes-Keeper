@@ -1,0 +1,50 @@
+<nav class="bg-slate-800 shadow-lg">
+    <div class="max-w-[89rem] mx-auto px-4">
+        <div class="flex justify-between">
+            <div class="flex justify-center">
+                
+               
+                    <a href="/<%=userName %>/index" class="flex items-center -ml-3 py-2" >
+                        <img src="/assets/realwhite.png" alt="" class="w-36">
+                        
+                    </a>
+                </div>
+       
+                <div class="hidden md:flex items-center justify-between gap-x-5">
+                    <a href="/<%=userName %>/index" class="text-sm px-3 hover:font-semibold hover:underline decoration-yellow-300 tracking-[0.15em] text-white font-light ">Home</a>
+                    
+                    <a href="/about" class="text-sm px-3 hover:font-semibold hover:underline decoration-yellow-300 tracking-[0.15em] text-white font-light ">About</a>
+                    <a href="/contact" class="text-sm px-3 hover:font-semibold hover:underline decoration-yellow-300 tracking-[0.15em] text-white font-light ">Contact Us</a>
+                    <a href="/<%=userName %>/account"><i class="fa-solid fa-user text-white hover:text-yellow-300"></i></a>
+                </div>
+            
+          
+        
+            <div class="md:hidden flex items-center gap-x-4 text-white">
+                <a href=""><i class="fa-solid fa-user "></i></a>
+                <button class="outline-none mobile-menu-button">
+                <svg class=" w-6 h-6 text-white hover:text-white "
+                    x-show="!showMenu"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden mobile-menu">
+        <ul class="bg-slate-600">
+            <li><a href="/<%=userName %>/index" class="block text-center text-sm px-2 py-4 text-white font-semibold">Home</a></li>
+            <li><a href="/about" class="block text-center text-sm px-2 py-4 text-white hover:bg-slate-500 transition duration-300">About</a></li>
+            <li><a href="/contact" class="block text-center text-sm px-2 py-4 text-white hover:bg-slate-500 transition duration-300">Contact Us</a></li>
+            
+        </ul>
+    </div>
+    </nav>
